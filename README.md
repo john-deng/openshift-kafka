@@ -16,7 +16,8 @@ oc create -f ./bootstrap/pvc.yml
 oc create -f ./zookeeper/bootstrap/pvc.yml
 
 # Create Zookeeper & Kakfa
-oc create -f zookeeper/zookeeper.yaml 
+oc create -f ./zookeeper/service.yml
+oc create -f ./zookeeper/zookeeper.yaml 
 oc create -f ./
 
 # Cleanup
