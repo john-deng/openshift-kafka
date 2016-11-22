@@ -27,6 +27,13 @@ oc create -f ./zookeeper/service.yml
 oc create -f ./zookeeper/zookeeper.yaml 
 oc create -f ./
 
+# Test
+oc create -f test/99testclient.yml
+oc rsh testclient
+
+# Scale up Cluster
+oc edit petset kakfa  #change replicas to desired number (make sure you have enough PV,PVC)
+
 # Cleanup
 oc delete all,petset --all
 oc delete pv,pvc --all
