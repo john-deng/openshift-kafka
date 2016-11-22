@@ -1,3 +1,5 @@
+> Thanks https://github.com/Yolean/kubernetes-kafka.
+
 
 ```sh
 
