@@ -46,3 +46,35 @@ spec:
     storage: 100Mi
   hostPath:
     path: /tmp/k8s-data/datadir-zoo-2
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: datadir-zoo-3
+  namespace: kafka
+  labels:
+    app: zk
+    petindex: "3"
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 100Mi
+  hostPath:
+    path: /tmp/k8s-data/datadir-zoo-3    
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: datadir-zoo-4
+  namespace: kafka
+  labels:
+    app: zk
+    petindex: "4"
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 100Mi
+  hostPath:
+    path: /tmp/k8s-data/datadir-zoo-4
