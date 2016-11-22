@@ -21,5 +21,5 @@ oc create -f create -f ./
 
 # Cleanup
 oc delete all,petset --all
-oc delete pvc,pvc --all
+oc delete pv,pvc --all
 ```
