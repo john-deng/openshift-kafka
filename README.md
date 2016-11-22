@@ -2,6 +2,8 @@
 
 
 ```sh
+# Pre-req
+git clone https://github.com/debianmaster/openshift-kafka.git && cd openshift-kafka
 
 # Unfortunately we need root priv for the containers that are used in this example
 oc adm policy add-scc-to-user anyuid -z default
