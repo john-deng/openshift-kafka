@@ -17,7 +17,7 @@ oc create -f ./zookeeper/bootstrap/pvc.yml
 
 # Create Zookeeper & Kakfa
 oc create -f zookeeper/zookeeper.yaml 
-oc create -f create -f ./
+oc create -f ./
 
 # Cleanup
 oc delete all,petset --all
