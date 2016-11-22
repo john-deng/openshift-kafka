@@ -2,7 +2,9 @@
 
 
 ```sh
-# Pre-req
+
+# Pre-req 
+oc cluster up  # setup openshift on docker for Mac  (Skip this if you already have a cluster)
 git clone https://github.com/debianmaster/openshift-kafka.git && cd openshift-kafka
 
 # Unfortunately we need root priv for the containers that are used in this example
