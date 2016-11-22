@@ -33,11 +33,14 @@ oc rsh testclient   #terminal 1
 oc rsh testclient   #terminal 2
 
 ## Inside testclient container Terminal 1
-./bin/kafka-topics.sh --zookeeper zookeeper:2181 --topic test1 --create --partitions 1 --replication-factor 1 #create topic
-./bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic test1 --from-beginning #read topic
+./bin/kafka-topics.sh --zookeeper zookeeper:2181 --topic test1 --create --partitions 1 \
+--replication-factor 1 #create topic
+./bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic test1 \
+--from-beginning #read topic
 
 ## Inside testclient container Terminal 2
-./bin/kafka-console-producer.sh --broker-list kafka-0.broker.kafka.svc.cluster.local:9092,kafka-1.broker.kafka.svc.cluster.local:9092 --topic test1    # Type message and press ^Z when done, check terminal 1
+./bin/kafka-console-producer.sh --broker-list kafka-0.broker.kafka.svc.cluster.local:9092,\
+kafka-1.broker.kafka.svc.cluster.local:9092 --topic test1    # Type message and press ^Z when done, check terminal 1
 
 
 # Scale up Cluster
