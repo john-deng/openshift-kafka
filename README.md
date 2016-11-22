@@ -6,6 +6,7 @@
 # Pre-req 
 oc cluster up  # setup openshift on docker for Mac  (Skip this if you already have a cluster)
 git clone https://github.com/debianmaster/openshift-kafka.git && cd openshift-kafka
+oc login -u system:admin
 
 # Unfortunately we need root priv for the containers that are used in this example
 oc adm policy add-scc-to-user anyuid -z default
