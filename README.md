@@ -14,9 +14,9 @@ oc adm policy add-scc-to-user anyuid -z default
 # Create namespace
 oc new-project kafka
 
-# Create Persistant Volumes
-./zookeeper/bootstrap/pv.sh
-./bootstrap/pv.sh
+# Create Persistant Volumes  No londer need these
+#./zookeeper/bootstrap/pv.sh
+#./bootstrap/pv.sh
 
 # Create  Persistant volumes claims
 oc create -f ./bootstrap/pvc.yml
