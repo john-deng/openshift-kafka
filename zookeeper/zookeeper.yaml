@@ -36,7 +36,7 @@ spec:
         pod.alpha.kubernetes.io/init-containers: '[
             {
                 "name": "install",
-                "image": "gcr.io/google_containers/zookeeper-install:0.1",
+                "image": "vpclub/zookeeper-install:0.1",
                 "imagePullPolicy": "Always",
                 "args": ["--version=3.5.2-alpha", "--install-into=/opt", "--work-dir=/work-dir"],
                 "volumeMounts": [
